@@ -17,7 +17,7 @@ def pcm_encode(x,b):
     k = np.floor(x/delta)
     k= np.clip(k,0,L-1).astype(int)
     
-    xcap = (k+0.5)**delta
+    xcap = (k+0.5)*delta
     
     Ps = np.mean(x**2)
     Pn = np.mean((x-xcap)**2)
